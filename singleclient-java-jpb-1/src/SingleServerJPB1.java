@@ -122,6 +122,11 @@ public class SingleServerJPB1 {
                         outputToClient.writeUTF("301 message format error");//this is if they had too few modifiers
                     } 
                 }
+                else if(strReceived.equalsIgnoreCase("shutdown")|| strReceived.equalsIgnoreCase("logout")) 
+                {
+                    outputToClient.writeUTF("300 invalid command. ");
+                    outputToClient.writeUTF("Please login first");
+                }
                 else
                 {
                     outputToClient.writeUTF("300 invalid command. Please login first");//for if they try to issue commands other than login

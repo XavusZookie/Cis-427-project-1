@@ -40,7 +40,11 @@ public class SingleClientJPB1 {
                 if(message.equalsIgnoreCase("shutdown")|| message.equalsIgnoreCase("logout")) {
                     message = fromServer.readUTF();
                 System.out.println("Server says: " + message);
-                    break;
+                    if(message.equalsIgnoreCase("200 ok"))
+                    {
+                        break;
+                    }
+                    
                 }
                 
                 //received message:

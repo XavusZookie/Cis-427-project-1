@@ -1,4 +1,0 @@
-root root22
-john john22
-sally sally22
-qiang qiang22
